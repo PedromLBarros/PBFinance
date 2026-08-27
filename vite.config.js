@@ -1,4 +1,6 @@
-node_modules/
-dist/
-src-tauri/target/
-.DS_Store
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+});
