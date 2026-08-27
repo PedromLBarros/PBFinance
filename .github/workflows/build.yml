@@ -52,6 +52,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Add this step to ensure release is created
+      - name: Wait for release to be ready
+        run: sleep 5
+
       - name: Install Linux build dependencies
         if: matrix.platform == 'ubuntu-22.04'
         run: |
